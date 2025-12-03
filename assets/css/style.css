@@ -1,26 +1,67 @@
-/* Custom scrollbar for the sidebar */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+/* Global Settings */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-        /* Global Font Settings */
-        body { 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            overflow: hidden; /* Prevent overflow */
-        }
+/* Scrollbar Customization */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
 
-        /* Map Container */
-        #map { 
-            height: 100vh; 
-            width: 100%; 
-            z-index: 1; 
-            outline: none;
-        }
+/* Map Styles */
+#map {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    outline: none;
+}
 
-        /* Transition for selection highlight */
-        .preset-btn {
-            transition: all 0.2s ease-in-out;
-        }
+/* Preset Button Animation */
+.preset-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Visual Editor Panel Animation */
+#visual-editor-panel {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* List Item Selection State */
+.selectable-item.selected {
+    background-color: #eff6ff; /* blue-50 */
+    color: #2563eb; /* blue-600 */
+    border-left: 4px solid #2563eb;
+    font-weight: 600;
+}
+
+/* Modified Rule Highlighting (Yellow/Amber) */
+.selectable-item.has-rule {
+    background-color: #fffbeb; /* amber-50 */
+    color: #b45309; /* amber-700 */
+    border-right: 4px solid #f59e0b; /* amber-500 */
+}
+
+.selectable-item.selected.has-rule {
+    background-color: #fff7ed; /* orange-50 mixed */
+    border-left: 4px solid #2563eb;
+    border-right: 4px solid #f59e0b;
+}
+
+/* Input Value Indicator */
+.input-has-value {
+    border-color: #f59e0b !important; /* amber-500 */
+    background-color: #fffbeb !important;
+    box-shadow: 0 0 0 1px #f59e0b;
+}
+
+/* Disabled Step State */
+.step-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    transition: opacity 0.3s;
+}

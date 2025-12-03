@@ -137,3 +137,6 @@ s.t:6|s.e:g|p.c:#ffa3b5c7|p.s:-40
 - Shareable links with base64-encoded apistyle
 - 3×3 tile grid preview
 - Legal mode with OSM/MapLibre + JSON styling
+
+---
+**Bug reports, feature requests and pull requests are always welcome** 

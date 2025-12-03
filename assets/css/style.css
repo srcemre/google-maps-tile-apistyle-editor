@@ -1,0 +1,26 @@
+/* Custom scrollbar for the sidebar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+        /* Global Font Settings */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        /* Map Container */
+        #map { 
+            height: 100vh; 
+            width: 100%; 
+            z-index: 1; 
+            outline: none;
+        }
+
+        /* Transition for selection highlight */
+        .preset-btn {
+            transition: all 0.2s ease-in-out;
+        }
